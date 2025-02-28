@@ -30,10 +30,11 @@ class CoursePlanner:
             self.course_times = course_times
             
     def get_user_input(self):
-        course = input("Enter the course to know the info about: ")
+        course = input("Enter the course name to retrieve information: ")
         return course
     
     def get_course_info(self, course):
+        print("\n")
         print("".center(150, "-") + "\n", end="|")
         print("Course Info:".center(148) + "|\n", end="|")
         print("".center(148, "-") + "|\n", end="|")
@@ -52,6 +53,7 @@ class CoursePlanner:
         else:
             print(f"The course {course} not found.".center(148), end="|\n|")
             print("".center(148, "_"), end="|\n")
+        print("\n")
             
 def main():
     coursePlanner = CoursePlanner(None, None, None)
